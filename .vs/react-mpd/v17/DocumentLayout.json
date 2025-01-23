@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "src\\App.tsx",
               "ToolTip": "E:\\Projects\\FullStack\\react-mpd\\src\\App.tsx",
               "RelativeToolTip": "src\\App.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-01-23T15:45:59.582Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "src\\components\\Button.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-01-23T15:31:23.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T15:31:23.293Z"
             },
             {
               "$type": "Document",
@@ -74,7 +73,7 @@
               "RelativeDocumentMoniker": "src\\components\\LoginForm.tsx",
               "ToolTip": "E:\\Projects\\FullStack\\react-mpd\\src\\components\\LoginForm.tsx",
               "RelativeToolTip": "src\\components\\LoginForm.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-01-23T15:28:46.371Z",
               "EditorCaption": ""

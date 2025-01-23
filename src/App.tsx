@@ -1,5 +1,10 @@
 import { useState } from 'react'
-
+import {
+    MDBCard,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBBtn
+} from 'mdb-react-ui-kit';
 import './App.css'
 
 import LoginForm from "./components/LoginForm";
@@ -9,16 +14,19 @@ function App() {
 
   return (
     <>
-      <div>
-       
-      </div>
-      <h1>Basic Test Page</h1>
-      <div className="card">
-              <LoginForm onClick={() => setCount((count) => count + 1)}>
-                  Login Form
-              </LoginForm>
-      </div>
-      
+          <h1>Basic Test Page</h1>
+
+          <MDBCard>
+              <MDBCardBody>
+                  <MDBCardTitle>Card title</MDBCardTitle>
+                  <LoginForm onClick={() => setCount((count) => count + 1)}>
+                      Login Form
+                  </LoginForm>
+                  <MDBBtn>Button</MDBBtn>
+              </MDBCardBody>
+          </MDBCard>
+          <p>{count}</p>
+
     </>
   )
 }
