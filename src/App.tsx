@@ -2,8 +2,6 @@ import { useState } from 'react'
 import {
     MDBCard,
     MDBCardBody,
-    MDBCardTitle,
-    MDBBtn
 } from 'mdb-react-ui-kit';
 import './App.css'
 
@@ -18,11 +16,9 @@ function App() {
 
           <MDBCard>
               <MDBCardBody>
-                  <MDBCardTitle>Card title</MDBCardTitle>
                   <LoginForm onClick={() => setCount((count) => count + 1)}>
                       Login Form
                   </LoginForm>
-                  <MDBBtn>Button</MDBBtn>
               </MDBCardBody>
           </MDBCard>
           <p>{count}</p>
