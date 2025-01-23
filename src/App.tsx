@@ -14,7 +14,7 @@ function App() {
     <>
           <h1>Basic Test Page</h1>
 
-          <MDBCard>
+          <MDBCard className="w-50">
               <MDBCardBody>
                   <LoginForm onClick={() => setCount((count) => count + 1)}>
                       Login Form
