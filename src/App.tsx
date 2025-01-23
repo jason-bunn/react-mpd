@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import Button from "./components/Button";
+
 import LoginForm from "./components/LoginForm";
 
 function App() {
@@ -14,11 +14,8 @@ function App() {
       </div>
       <h1>Basic Test Page</h1>
       <div className="card">
-              <Button onClick={() => setCount((count) => count + 1)}>
-                  count is {"" + count}
-              </Button>
-              <LoginForm>
-              Login Form
+              <LoginForm onClick={() => setCount((count) => count + 1)}>
+                  Login Form
               </LoginForm>
       </div>
       
