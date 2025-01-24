@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import {
     MDBCard,
     MDBCardBody,
@@ -6,25 +7,45 @@ import {
 import './App.css'
 
 import LoginForm from "./components/LoginForm";
+import HelloWorld from "./components/HelloWorld";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-          <h1>Basic Test Page</h1>
+    const [loggedIn, setLoggedIn] = useState<string>();
+   
+    function onLoginClick(someArg: string) {
+        setLoggedIn(someArg);
+    }
 
-          <MDBCard className="w-50">
-              <MDBCardBody>
-                  <LoginForm onClick={() => setCount((count) => count + 1)}>
-                      Login Form
-                  </LoginForm>
-              </MDBCardBody>
-          </MDBCard>
-          <p>{count}</p>
+    if (!loggedIn) {
+        return (
+            <>
+                <h1>Basic Test Page</h1>
 
-    </>
-  )
+                <MDBCard className="w-50">
+                    <MDBCardBody>
+                        <LoginForm onClick={onLoginClick}>
+                            Login Form
+                        </LoginForm>
+                    </MDBCardBody>
+                </MDBCard>
+
+
+            </>
+        )
+    }
+    return (
+        <>
+            
+            <h1>Welcome</h1>
+
+            <HelloWorld currentUser={loggedIn} />
+
+            
+        </>
+    )
 }
 
 export default App
