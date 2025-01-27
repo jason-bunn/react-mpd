@@ -24,6 +24,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Set Git User Identity
+        run: |
+          git config --local user.email "jason.bunn009@gmail.com"
+          git config --local user.name "Jason Bunn"
+
       # Runs a single command using the runners shell
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v1
