@@ -26,8 +26,8 @@ jobs:
 
       - name: Set Git User Identity
         run: |
-          git config --local user.email "jason.bunn009@gmail.com"
-          git config --local user.name "Jason Bunn"
+          git config --global user.email jason.bunn009@gmail.com
+          git config --global user.name jason-bunn
 
       # Runs a single command using the runners shell
       - name: Use Node.js ${{matrix.node-version}}
