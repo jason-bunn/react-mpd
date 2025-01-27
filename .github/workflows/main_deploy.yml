@@ -15,7 +15,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   call-workflow-passing-data:
-    uses: .github/workflows/main_deploy.yml@main
+    uses: react-mpd/.github/workflows/main_deploy.yml@main
     with:
       config-path: .github/labeler.yml
     secrets: inherit # <= this one
