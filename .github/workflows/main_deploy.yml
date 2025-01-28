@@ -49,6 +49,9 @@ jobs:
           npm run deploy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          source: ./
+          destination: ./_site
       - name: Sanity check
         run: echo "Jobs finished"
         #bonus comment
