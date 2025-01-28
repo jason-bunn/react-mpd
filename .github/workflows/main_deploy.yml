@@ -1,10 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
 name: CI
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 # Controls when the workflow will run
 on:
@@ -33,7 +29,8 @@ jobs:
         run: |
           git config --global user.email jason.bunn009@gmail.com
           git config --global user.name jason-bunn
-
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
       # Runs a single command using the runners shell
       - name: Use Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v1
@@ -49,15 +46,16 @@ jobs:
           npm run deploy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          source: ./
-          destination: ./_site
       - name: Sanity check
         run: echo "Jobs finished"
         #bonus comment
 
  # Deployment job
   deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
