@@ -50,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: dist
+          name: github-pages
           path: _site/
       - name: Sanity check
         run: echo "Jobs finished"
