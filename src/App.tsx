@@ -22,7 +22,7 @@ function App() {
     if (!loggedIn) {
         return (
             <>
-                <h1>Basic Test Page now with CI</h1>
+                <h1>Basic Test Page now with CI amazingness</h1>
 
                 <MDBCard className="w-50">
                     <MDBCardBody>
