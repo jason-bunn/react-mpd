@@ -47,6 +47,8 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
           npm run deploy
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
       - name: Sanity check
         run: echo "Jobs finished"
         #bonus comment
