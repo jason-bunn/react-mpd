@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://jason-bunn.github.io/react-mpd/",
   "name": "react-mpd",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
