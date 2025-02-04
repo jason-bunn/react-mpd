@@ -8,6 +8,7 @@ import './App.css'
 
 import LoginForm from "./components/LoginForm";
 import HelloWorld from "./components/HelloWorld";
+import FetchTest from "./components/FetchTest";
 
 
 
@@ -42,7 +43,7 @@ function App() {
             <h1>Welcome</h1>
 
             <HelloWorld currentUser={loggedIn} />
-
+            <FetchTest></FetchTest>
             
         </>
     )
