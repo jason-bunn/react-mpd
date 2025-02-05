@@ -15,7 +15,7 @@ function FetchTest() {
 
     return (
         <>
-            <p>{recordItems}</p>
+            <ul>{recordItems}</ul>
         </>
     )
 }
