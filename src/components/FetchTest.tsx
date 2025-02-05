@@ -11,6 +11,7 @@ function FetchTest() {
             .then(res => {
                 setRecords(res);
                 recordItems = records.map(record => <li>{record}</li>);
+                console.log(res);
                 console.log(recordItems);
                 console.log(records);
                 setLoading(false);
