@@ -9,7 +9,7 @@ function FetchTest() {
         fetch('https://dev-j1s8np4kcjf3ota.api.raw-labs.com/mock/product/sales')
             .then(response => response.json())
             .then(res => {
-                setRecords(res.slice(0, 10));
+                setRecords(res);
                 recordItems = records.map(record => <li>{record}</li>)
                 setLoading(false);
             })
