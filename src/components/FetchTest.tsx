@@ -18,7 +18,7 @@ function FetchTest() {
 
     return (
         <>
-            <ul>{dataLoading ? 'loading...' : recordItems}</ul>
+            <ul>{dataLoading ? <li>loading...</li> : recordItems}</ul>
         </>
     )
 }
