@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react'
 function FetchTest() {
 
-    const [records, setRecords] = useState([]);
+    const [records, setRecords] = useState<any[]>([]);
     const [dataLoading, setLoading] = useState(true);
 
-    let recordItems: any[] = [];
+
     useEffect(() => {
         fetch('https://dev-j1s8np4kcjf3ota.api.raw-labs.com/mock/product/sales')
             .then(response => response.json())
             .then(res => {
                 setRecords(res);
-                recordItems = res.map((record: any) => <li>{record.productname} {record.totalsales}</li>);
-                console.log(res);
-                console.log(recordItems);
-                console.log(records);
                 setLoading(false);
             })
             .catch(err => console.log(err))
@@ -21,7 +17,9 @@ function FetchTest() {
 
     return (
         <>
-            <ul>{dataLoading ? <li>loading...</li> : recordItems}</ul>
+            <ul>{dataLoading ? <li>loading...</li> : (
+                records.map((record) => (<li key={record.productname}>{record.productname} {record.totalsales}</li>)
+                ))}</ul>
         </>
     )
 }
