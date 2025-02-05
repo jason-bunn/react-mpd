@@ -10,7 +10,9 @@ function FetchTest() {
             .then(response => response.json())
             .then(res => {
                 setRecords(res);
-                recordItems = records.map(record => <li>{record}</li>)
+                recordItems = records.map(record => <li>{record}</li>);
+                console.log(recordItems);
+                console.log(records);
                 setLoading(false);
             })
             .catch(err => console.log(err))
