@@ -3,6 +3,7 @@ import { useState } from 'react'
 import {
     MDBCard,
     MDBCardBody,
+    MDBContainer,
 } from 'mdb-react-ui-kit';
 import './App.css'
 
@@ -24,14 +25,16 @@ function App() {
         return (
             <>
                 <h1>Basic Test Page now with CI amazingness</h1>
-
-                <MDBCard className="w-50">
-                    <MDBCardBody>
-                        <LoginForm onClick={onLoginClick}>
-                            Login Form
-                        </LoginForm>
-                    </MDBCardBody>
-                </MDBCard>
+                <MDBContainer>
+                    <MDBCard className="w-50">
+                        <MDBCardBody>
+                            <LoginForm onClick={onLoginClick}>
+                                Form
+                            </LoginForm>
+                        </MDBCardBody>
+                    </MDBCard>
+                </MDBContainer>
+                
 
                
             </>
