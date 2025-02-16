@@ -24,8 +24,8 @@ function App() {
     if (!loggedIn) {
         return (
             <>
+                <MDBContainer className="d-flex justify-content-center">
                 <h1>Basic Test Page now with CI amazingness</h1>
-                <MDBContainer>
                     <MDBCard className="w-50">
                         <MDBCardBody>
                             <LoginForm onClick={onLoginClick}>
