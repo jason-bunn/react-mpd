@@ -5,13 +5,20 @@ import {
     MDBCardBody,
     MDBContainer,
 } from 'mdb-react-ui-kit';
+
+import {
+    QueryClient,
+    QueryClientProvider
+} from '@tanstack/react-query'
+
 import './App.css'
 
 import LoginForm from "./components/LoginForm";
 import HelloWorld from "./components/HelloWorld";
 import FetchTest from "./components/FetchTest";
 
-
+// Create a queryclient
+const queryClient = new QueryClient()
 
 function App() {
 
@@ -47,8 +54,9 @@ function App() {
             <h1>Welcome</h1>
 
             <HelloWorld currentUser={loggedIn} />
-            <FetchTest></FetchTest>
-            
+            <QueryClientProvider client={queryClient}>
+                <FetchTest></FetchTest>
+            </QueryClientProvider>
         </>
     )
 }
