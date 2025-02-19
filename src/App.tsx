@@ -16,6 +16,7 @@ import './App.css'
 import LoginForm from "./components/LoginForm";
 import HelloWorld from "./components/HelloWorld";
 import FetchTest from "./components/FetchTest";
+import NavBar from "./components/NavBar";
 
 // Create a queryclient
 const queryClient = new QueryClient()
@@ -33,6 +34,7 @@ function App() {
             <>
                 <h1>Basic Test Page now with CI amazingness</h1>
                 <hr/>
+                <NavBar/>
                 <MDBContainer className="d-flex justify-content-center">
                     <MDBCard className="w-50">
                         <MDBCardBody>
