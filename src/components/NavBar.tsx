@@ -6,7 +6,6 @@ interface NavBarProps {
 function NavBar({ brandName, imageSrc }: NavBarProps) {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow">
-      <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
             src={imageSrc}
@@ -82,7 +81,6 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
             </button>
           </form>
         </div>
-      </div>
     </nav>
   );
 }
