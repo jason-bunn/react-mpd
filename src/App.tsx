@@ -27,6 +27,7 @@ function App() {
         <h1>Basic Test Page now with CI amazingness</h1>
         <hr />
         <NavBar brandName="Bunn Co" imageSrc={imagePath} />
+        <hr/>
         <MDBContainer className="d-flex justify-content-center">
           <MDBCard className="w-50">
             <MDBCardBody>
@@ -40,7 +41,9 @@ function App() {
   return (
     <>
       <h1>Welcome</h1>
-
+      <hr/>
+      <NavBar brandName="Bunn Co" imageSrc={imagePath} />
+      <hr/>
       <HelloWorld currentUser={loggedIn} />
       <QueryClientProvider client={queryClient}>
         <FetchTest></FetchTest>
