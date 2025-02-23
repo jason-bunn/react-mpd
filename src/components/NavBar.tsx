@@ -5,7 +5,7 @@ interface NavBarProps {
 
 function NavBar({ brandName, imageSrc }: NavBarProps) {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-white shadow">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow">
         <a className="navbar-brand" href="#">
           <img
             src={imageSrc}
