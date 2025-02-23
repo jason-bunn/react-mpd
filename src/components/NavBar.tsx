@@ -29,11 +29,9 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
           <i className="fas fa-bars"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul className="me-auto mb-2 mb-lg-0">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
+          <ul className="navbar-nav mb-2 mb-lg-0">
+            <li className="nav-item active ">
+            <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -65,7 +63,6 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
                     Another action
                   </a>
                 </li>
-                <div className="dropdown-divider"></div>
                 <li>
                   <a className="dropdown-item" href="#">
                     Something else here
