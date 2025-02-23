@@ -66,7 +66,7 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
             </li>
         
           </ul>
-          <form className="d-flex me-3" role="search">
+          <form className="form-inline my-2 my-lg-0" role="search">
             <input
               className="form-control mr-sm-2"
               type="search"
