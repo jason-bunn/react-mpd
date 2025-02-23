@@ -6,6 +6,7 @@ interface NavBarProps {
 function NavBar({ brandName, imageSrc }: NavBarProps) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
             src={imageSrc}
@@ -66,7 +67,7 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
             </li>
         
           </ul>
-          <form className="form-inline my-2 my-lg-0" role="search">
+          <form className="d-flex input-group w-auto" role="search">
             <input
               className="form-control mr-sm-2"
               type="search"
@@ -81,6 +82,8 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
             </button>
           </form>
         </div>
+        </div>
+        
     </nav>
   );
 }
