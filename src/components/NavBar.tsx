@@ -29,7 +29,7 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
           <i className="fas fa-bars"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul className="navbar-nav mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item active ">
             <a className="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -71,12 +71,13 @@ function NavBar({ brandName, imageSrc }: NavBarProps) {
               </ul>
             </li>
           </ul>
-          <form className="d-flex input-group w-auto" role="search">
+          <form className="d-flex input-group w-auto">
             <input
               type="search"
-              className="form-control"
-              placeholder="Type query"
+              className="form-control rounded"
+              placeholder="Search"
               aria-label="Search"
+              aria-describedby="search-addon"
             />
             <button
               data-mdb-ripple-init
