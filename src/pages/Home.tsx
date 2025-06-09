@@ -1,16 +1,7 @@
 import React from 'react';
 import { MDBContainer } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faReact,
-  faJs,
-  faNodeJs,
-  faGithub,
-  faHtml5,
-  faCss3Alt,
-} from '@fortawesome/free-brands-svg-icons';
-import { faCubes } from '@fortawesome/free-solid-svg-icons'; // For Unity placeholder
+
 
 const Home: React.FC = () => (
   <MDBContainer className="text-center mt-5">
@@ -22,13 +13,12 @@ const Home: React.FC = () => (
     </p>
     {/* Tech icons row */}
     <div className='d-flex justify-content-center align-items-center flex-wrap mt-4 gap-4'>
-      <FontAwesomeIcon icon={faReact} size='2x' title='React' />
-      <FontAwesomeIcon icon={faJs} size='2x' title='JavaScript/TypeScript' />
-      <FontAwesomeIcon icon={faNodeJs} size='2x' title='Node.js' />
-      <FontAwesomeIcon icon={faHtml5} size='2x' title='HTML5' />
-      <FontAwesomeIcon icon={faCss3Alt} size='2x' title='CSS3' />
-      <FontAwesomeIcon icon={faGithub} size='2x' title='GitHub' />
-      <FontAwesomeIcon icon={faCubes} size='2x' title='Unity (placeholder)' />
+      <i className='devicon-react-original colored' title='React' style={{ fontSize: '2rem' }}></i>
+      <i className='devicon-typescript-plain colored' title='TypeScript' style={{ fontSize: '2rem' }}></i>
+      <i className='devicon-nodejs-plain colored' title='Node.js' style={{ fontSize: '2rem' }}></i>
+      <i className='devicon-unity-original colored' title='Unity' style={{ fontSize: '2rem' }}></i>
+      <i className='devicon-csharp-plain colored' title='C#' style={{ fontSize: '2rem' }}></i>
+      <i className='devicon-github-original' title='GitHub' style={{ fontSize: '2rem' }}></i>
     </div>
     <Link to='/projects'>
       <button className='btn btn-primary'>
