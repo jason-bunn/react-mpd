@@ -16,7 +16,12 @@ const Home: React.FC = () => (
       <i className='devicon-react-original colored' title='React' style={{ fontSize: '2rem' }}></i>
       <i className='devicon-typescript-plain colored' title='TypeScript' style={{ fontSize: '2rem' }}></i>
       <i className='devicon-nodejs-plain colored' title='Node.js' style={{ fontSize: '2rem' }}></i>
-      <i className='devicon-unity-original colored' title='Unity' style={{ fontSize: '2rem' }}></i>
+      <img
+        src='https://upload.wikimedia.org/wikipedia/commons/1/19/Unity_Technologies_logo.svg'
+        alt='Unity'
+        title='Unity'
+        style={{ height: '32px', filter: 'invert(0.8)' }}
+      />
       <i className='devicon-csharp-plain colored' title='C#' style={{ fontSize: '2rem' }}></i>
       <i className='devicon-github-original' title='GitHub' style={{ fontSize: '2rem' }}></i>
     </div>
