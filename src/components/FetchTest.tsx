@@ -18,7 +18,7 @@ function FetchTest() {
     return (
         <>
             <ul>{dataLoading ? <li>loading...</li> : (
-                records.map((record) => (<li key={record.productname}>{record.productname} {record.totalsales}</li>)
+                records.map((record) => (<li key={record.productid}>{record.productname} {record.totalsales}</li>)
                 ))}</ul>
         </>
     )
