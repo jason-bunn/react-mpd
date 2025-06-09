@@ -17,7 +17,7 @@ const App: React.FC = () => {
     <Router>
       <div className='d-flex'>
         <div className='bg-light p-4 vh-100' style={{ width: '250px' }}>
-          <h4 className='mb-4'>YourName</h4>
+          <h4 className='mb-4'>Jason Bunn</h4>
           <nav className='d-flex flex-column'>
             <Link to='/' className='mb-2'>Home</Link>
             <Link to='/about' className='mb-2'>About</Link>
