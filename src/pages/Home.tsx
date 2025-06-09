@@ -26,7 +26,7 @@ const Home: React.FC = () => (
       <i className='devicon-github-original' title='GitHub' style={{ fontSize: '2rem' }}></i>
     </div>
     <Link to='/projects'>
-      <button className='btn btn-primary'>
+      <button className='btn btn-primary mt-4'>
         View Projects
       </button>
     </Link>
