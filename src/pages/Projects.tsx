@@ -1,67 +1,112 @@
-import React from 'react';
-import { MDBContainer } from 'mdb-react-ui-kit';
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBBtn,
+  MDBCardImage,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalTitle,
+  MDBModalBody,
+  MDBModalFooter
+} from 'mdb-react-ui-kit';
 
-const Projects: React.FC = () => (
-  <MDBContainer className='my-5'>
-    <h2>Projects - Coming Soon</h2>
-    <div className='row'>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Adventure Science Center VR</h5>
-            <p className='card-text'> Nashville’s first, large-scale, public, virtual reality installation with custom-designed experiences.</p>
-            <a href='#' className='btn btn-primary'>View</a>
+const projectData = [
+  {
+    title: 'Adventure Science Center VR',
+    description: 'Nashville’s first, large-scale, public, virtual reality installation with custom-designed experiences.',
+    image: '/images/adventure-science-center.jpg'
+  },
+  {
+    title: 'Franke VR Tradeshow Booth',
+    description: 'Inside the headset, trade show attendees were met by Franke’s virtual trade show guide.',
+    image: '/images/franke-vr.jpg'
+  },
+  {
+    title: 'Boo Bunny Plague',
+    description: 'A comedy action adventure musical game taking place across multiple dimensions.',
+    image: '/images/boo-bunny-plague.jpg'
+  },
+  {
+    title: 'Aimlabs',
+    description: 'Aim trainer offering personalized tasks, real-time analytics, and game-specific tools to elevate your gameplay.',
+    image: '/images/aimlabs.jpg'
+  },
+  {
+    title: 'Aegis Descent',
+    description: 'Aegis Descent is a fast-paced action game set at the end of WW2.',
+    image: '/images/aegis-descent.jpg'
+  },
+  {
+    title: 'Walmart Universe of Play',
+    description: 'The ultimate virtual toy destination in Roblox.',
+    image: '/images/walmart-universe.jpg'
+  },
+];
+
+const Projects: React.FC = () => {
+  const [basicModal, setBasicModal] = useState(false);
+  const [activeProject, setActiveProject] = useState<typeof projectData[0] | null>(null);
+
+  const toggleShow = (project: typeof projectData[0]) => {
+    setActiveProject(project);
+    setBasicModal(!basicModal);
+  };
+
+  return (
+    <MDBContainer className='my-5'>
+      <h2 className='mb-4'>Featured Projects</h2>
+      <p className='mb-5'>
+        Here’s a selection of immersive and full-stack projects I've contributed to — from AR/VR installations to commercial games and interactive tools.
+        Many of these projects were built using Unity3D, C#, and a combination of modern web and graphics pipelines.
+      </p>
+
+      <div className='row gy-4'>
+        {projectData.map((project, idx) => (
+          <div className='col-md-6 col-lg-4' key={idx}>
+            <MDBCard>
+              <MDBCardImage src={project.image} position='top' alt={project.title} />
+              <MDBCardBody>
+                <MDBCardTitle>{project.title}</MDBCardTitle>
+                <MDBCardText>{project.description}</MDBCardText>
+                <MDBBtn onClick={() => toggleShow(project)}>View</MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
           </div>
-        </div>
+        ))}
       </div>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Franke VR Tradeshow booth</h5>
-            <p className='card-text'>Inside the headset, trade show attendees were met by Franke’s virtual trade show
-              guide.</p>
-            <a href='#' className='btn btn-primary'>View</a>
-          </div>
-        </div>
-      </div>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Boo Bunny Plague</h5>
-            <p className='card-text'>Boo Bunny Plague is a comedy action adventure musical game taking place across multiple dimensions and featuring a storyline with musical numbers.</p>
-            <a href='#' className='btn btn-primary'>View</a>
-          </div>
-        </div>
-      </div>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Aimlabs</h5>
-            <p className='card-text'>Aimlabs is the leading AI-powered aim trainer offering personalized tasks, real-time analytics, and game-specific tools to elevate your gameplay.</p>
-            <a href='#' className='btn btn-primary'>View</a>
-          </div>
-        </div>
-      </div>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Aegis Descent</h5>
-            <p className='card-text'>Aegis Descent is a fast-paced action game set at the end of WW2</p>
-            <a href='#' className='btn btn-primary'>View</a>
-          </div>
-        </div>
-      </div>
-      <div className='col-md-4'>
-        <div className='card'>
-          <div className='card-body'>
-            <h5 className='card-title'>Walmart Universe of Play</h5>
-            <p className='card-text'> The ultimate virtual toy destination in Roblox.</p>
-            <a href='#' className='btn btn-primary'>View</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </MDBContainer>
-);
+
+      <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+        <MDBModalDialog>
+          <MDBModalContent>
+            <MDBModalHeader>
+              <MDBModalTitle>{activeProject?.title}</MDBModalTitle>
+              <MDBBtn className='btn-close' color='none' onClick={() => setBasicModal(false)}></MDBBtn>
+            </MDBModalHeader>
+            <MDBModalBody>
+              <img
+                src={activeProject?.image}
+                alt={activeProject?.title}
+                className='img-fluid mb-3'
+              />
+              <p>{activeProject?.description}</p>
+              {/* Add more details or links here if needed */}
+            </MDBModalBody>
+            <MDBModalFooter>
+              <MDBBtn color='secondary' onClick={() => setBasicModal(false)}>
+                Close
+              </MDBBtn>
+            </MDBModalFooter>
+          </MDBModalContent>
+        </MDBModalDialog>
+      </MDBModal>
+    </MDBContainer>
+  );
+};
 
 export default Projects;
