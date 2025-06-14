@@ -20,32 +20,32 @@ const projectData = [
   {
     title: 'Adventure Science Center VR',
     description: 'Nashville’s first, large-scale, public, virtual reality installation with custom-designed experiences.',
-    image: '/images/adventure-science-center.jpg'
+    image: '/react-mpd/images/adventure-science-center.jpg'
   },
   {
     title: 'Franke VR Tradeshow Booth',
     description: 'Inside the headset, trade show attendees were met by Franke’s virtual trade show guide.',
-    image: '/images/franke-vr.jpg'
+    image: '/react-mpd/images/franke-vr.jpg'
   },
   {
     title: 'Boo Bunny Plague',
     description: 'A comedy action adventure musical game taking place across multiple dimensions.',
-    image: '/images/boo-bunny-plague.jpg'
+    image: '/react-mpd/images/boo-bunny-plague.jpg'
   },
   {
     title: 'Aimlabs',
     description: 'Aim trainer offering personalized tasks, real-time analytics, and game-specific tools to elevate your gameplay.',
-    image: '/images/aimlabs.jpg'
+    image: '/react-mpd/images/aimlabs.jpg'
   },
   {
     title: 'Aegis Descent',
     description: 'Aegis Descent is a fast-paced action game set at the end of WW2.',
-    image: '/images/aegis-descent.jpg'
+    image: '/react-mpd/images/aegis-descent.jpg'
   },
   {
     title: 'Walmart Universe of Play',
     description: 'The ultimate virtual toy destination in Roblox.',
-    image: '/images/walmart-universe.jpg'
+    image: '/react-mpd/images/walmart-universe.jpg'
   },
 ];
 
