@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
         ))}
       </div>
 
-      <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
+      <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex='-1'>
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalHeader>
