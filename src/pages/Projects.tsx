@@ -22,32 +22,50 @@ const projectData = [
   {
     title: 'Adventure Science Center VR',
     description: 'Nashville’s first, large-scale, public, virtual reality installation with custom-designed experiences.',
-    image: `${basePath}adventure-science-center.jpg`
+    details: 'Developed with Unity3D and C#, this VR installation featured interactive educational simulations designed for public engagement at Nashville’s Adventure Science Center.',
+    image: `${basePath}adventure-science-center.jpg`,
+    stack: 'Unity3d, C#, HTC Vive, SteamVR',
+    link: '#'
   },
   {
     title: 'Franke VR Tradeshow Booth',
     description: 'Inside the headset, trade show attendees were met by Franke’s virtual trade show guide.',
-    image: `${basePath}franke-vr.jpg`
+    details: 'Franke’s VR tradeshow booth was designed to engage attendees with an immersive experience that showcased their products and services in a virtual environment.',
+    image: `${basePath}franke-vr.jpg`,
+    stack: 'Unity3d, C#, HTC Vive, SteamVR',
+    link: '#'
   },
   {
     title: 'Boo Bunny Plague',
     description: 'A comedy action adventure musical game taking place across multiple dimensions.',
-    image: `${basePath}boo-bunny-plague.jpg`
+    details: 'Join Bunny and his pals Gunny, Faye, and Ganny on an epic quest to earn enough money to buy himself an Auto-repair unit! Bunny is a robotic children’s toy who was given artificial life by a computer virus. After meeting his BFF, a military prototype robot named Gunny, he quickly discovers that being a toy means he’s not quite as tough as his deranged mind has lead him to believe, and he certainly doesn’t have a military grade auto-repair like Gunny does.',
+    image: `${basePath}boo-bunny-plague.jpg`,
+    stack: 'Unity3d, C#',
+    link: '#'
   },
   {
     title: 'Aimlabs',
     description: 'Aim trainer offering personalized tasks, real-time analytics, and game-specific tools to elevate your gameplay.',
-    image: `${basePath}aimlabs.jpg`
+    details: 'Aim Lab is a free, science-backed aim training platform available on Steam, designed to improve players’ aiming skills in first-person and third-person shooter (FPS/TPS) games. It offers a wide range of customizable training scenarios, personalized analytics, and features to help players identify and address their weaknesses.',
+    image: `${basePath}aimlabs.jpg`,
+    stack: 'Unity3d, C#',
+    link: '#'
   },
   {
     title: 'Aegis Descent',
     description: 'Aegis Descent is a fast-paced action game set at the end of WW2.',
-    image: `${basePath}aegis-descent.jpg`
+    details: 'Aegis Descent is a fast-paced, action-packed, roguelite vehicle shooter set in an alternate 1940s World War II, where players pilot the experimental Aegis hover tank. The game features intense combat against hostile bugs within a secret testing facility, blending vehicle combat with roguelite elements like procedurally generated maps and permadeath.',
+    image: `${basePath}aegis-descent.jpg`,
+    stack: 'Unreal Engine, C++',
+    link: '#'
   },
   {
     title: 'Walmart Universe of Play',
     description: 'The ultimate virtual toy destination in Roblox.',
-    image: `${basePath}walmart-universe.jpg`
+    details: 'Walmart’s Universe of Play was a virtual experience on Roblox, designed to engage younger users by bringing popular toy brands to life in a metaverse setting. It featured immersive games, virtual toys, and challenges based on brands like L.O.L. Surprise!, Jurassic World, Paw Patrol, and Magic Mixies.',
+    image: `${basePath}walmart-universe.jpg`,
+    stack: 'Roblox, Lua',
+    link: '#'
   },
 ];
 
@@ -101,7 +119,10 @@ const Projects: React.FC = () => {
                 alt={activeProject?.title}
                 className='img-fluid mb-3'
               />
-              <p>{activeProject?.description}</p>
+              <p><strong>Project Overview:</strong> {activeProject?.details}</p>
+              {activeProject?.stack && (
+                <p><strong>Technologies:</strong> {activeProject.stack}</p>
+              )}
               {/* Add more details or links here if needed */}
             </MDBModalBody>
             <MDBModalFooter>
