@@ -36,10 +36,14 @@ const App: React.FC = () => {
 
           <MDBFooter className='bg-light text-center py-3 mt-auto'>
             <div className='mb-2'>
-              <MDBIcon fab icon='github' className='me-3' />
-              <MDBIcon fab icon='linkedin' />
+              <a href='https://github.com/jason-bunn' target='_blank' rel='noopener noreferrer' className='me-3 text-dark'>
+                <MDBIcon fab icon='github' className='me-3' />
+              </a>
+              <a href='https://linkedin.com/in/jasonbunn' target='_blank' rel='noopener noreferrer' className='me-3 text-dark'>
+                <MDBIcon fab icon='linkedin' />
+              </a>
             </div>
-            <small>&copy; {new Date().getFullYear()} Your Name</small>
+            <small>&copy; {new Date().getFullYear()} Jason Bunn</small>
           </MDBFooter>
         </div>
       </div>
