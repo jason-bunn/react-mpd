@@ -67,6 +67,14 @@ const projectData = [
     stack: 'Roblox, Lua',
     link: '#'
   },
+  {
+    title: 'Portfolio Website',
+    description: 'Yes! This very website you are currently viewing.',
+    details: 'In an effort to showcase my work and skills, I built this portfolio website using React, TypeScript, and MDBootstrap. It serves as a platform to highlight my projects, experiences, and technical expertise.',
+    image: `${basePath}portfoliopage.jpg`,
+    stack: 'TypeScript, React, MDBootstrap',
+    link: '#'
+  },
 ];
 
 const Projects: React.FC = () => {
