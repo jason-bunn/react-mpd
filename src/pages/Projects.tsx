@@ -16,36 +16,38 @@ import {
   MDBModalFooter
 } from 'mdb-react-ui-kit';
 
+const basePath = import.meta.env.DEV ? '/images/' : '/react-mpd/images/';
+
 const projectData = [
   {
     title: 'Adventure Science Center VR',
     description: 'Nashville’s first, large-scale, public, virtual reality installation with custom-designed experiences.',
-    image: '/react-mpd/images/adventure-science-center.jpg'
+    image: `${basePath}adventure-science-center.jpg`
   },
   {
     title: 'Franke VR Tradeshow Booth',
     description: 'Inside the headset, trade show attendees were met by Franke’s virtual trade show guide.',
-    image: '/react-mpd/images/franke-vr.jpg'
+    image: `${basePath}franke-vr.jpg`
   },
   {
     title: 'Boo Bunny Plague',
     description: 'A comedy action adventure musical game taking place across multiple dimensions.',
-    image: '/react-mpd/images/boo-bunny-plague.jpg'
+    image: `${basePath}boo-bunny-plague.jpg`
   },
   {
     title: 'Aimlabs',
     description: 'Aim trainer offering personalized tasks, real-time analytics, and game-specific tools to elevate your gameplay.',
-    image: '/react-mpd/images/aimlabs.jpg'
+    image: `${basePath}aimlabs.jpg`
   },
   {
     title: 'Aegis Descent',
     description: 'Aegis Descent is a fast-paced action game set at the end of WW2.',
-    image: '/react-mpd/images/aegis-descent.jpg'
+    image: `${basePath}aegis-descent.jpg`
   },
   {
     title: 'Walmart Universe of Play',
     description: 'The ultimate virtual toy destination in Roblox.',
-    image: '/react-mpd/images/walmart-universe.jpg'
+    image: `${basePath}walmart-universe.jpg`
   },
 ];
 
@@ -70,7 +72,12 @@ const Projects: React.FC = () => {
         {projectData.map((project, idx) => (
           <div className='col-md-6 col-lg-4' key={idx}>
             <MDBCard>
-              <MDBCardImage src={project.image} position='top' alt={project.title} />
+              <MDBCardImage src={project.image} position='top' alt={project.title} style={{
+                objectFit: 'cover',
+                height: '200px',
+                width: '100%',
+                maxHeight: '200px'
+              }} />
               <MDBCardBody>
                 <MDBCardTitle>{project.title}</MDBCardTitle>
                 <MDBCardText>{project.description}</MDBCardText>
